@@ -1,0 +1,10 @@
+# Source PDFs are large (~367 MB total); commit only the two samples.
+PDF/*.pdf
+!PDF/2025.pdf
+!PDF/2004.pdf
+
+# Jupyter / Python noise
+.ipynb_checkpoints/
+__pycache__/
+*.pyc
+.DS_Store
