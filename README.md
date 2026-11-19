@@ -34,6 +34,15 @@ classify pages  →  detect format family per PDF  →  [OCR if scanned]  →  r
 - **`pandas`** — assembles records and writes one CSV per budget year.
 - **`re`** — field extraction from the reconstructed text.
 
+## How I used AI
+
+I built this with **Claude Code** as a pair-programming partner, with a clear split of work:
+
+- **Claude Code** wrote and debugged the parsers and the notebook — the OCR step, the table reconstruction from PDF geometry, and the five format-specific parsers.
+- **I** did the parts that needed judgment: I worked out the five format families by inspecting the source PDFs, decided the parsing rules and output schema (documented in the *"Decisions agreed before writing this notebook"* table), directed the overall workflow, refined the prompts when the output was wrong, and checked the resulting CSVs against the original documents.
+
+AI handled the implementation; the domain analysis, the decisions, and the accuracy checks were mine.
+
 ## Output schema
 
 Each row is one capital project:
